@@ -28,6 +28,12 @@
     h1{font-size:18px;margin:0}
     p.lead{margin:0;color:var(--muted);font-size:14px}
 
+    /* Navegación mejorada */
+    nav a.active, nav a:hover{
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
     main.hero{display:flex;gap:28px;align-items:center;margin-top:28px}
     .hero-left{flex:1}
     .hero-card{background:var(--card);padding:26px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(45,65,95,0.06)}
@@ -37,6 +43,13 @@
 
     .btn{display:inline-block;margin-top:16px;padding:12px 18px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:600;box-shadow:0 8px 20px rgba(43,108,176,0.18)}
     .btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(43,108,176,0.16)}
+    .btn:hover{background-color:#1e90ff}
+
+    /* Efectos hover para tarjetas */
+    .catalog-item:hover{
+      transform: scale(1.05);
+      box-shadow: 0 12px 40px rgba(45,65,95,0.15);
+    }
 
     .hero-right{width:320px}
     .card-small{background:linear-gradient(180deg,#fff,#fbfdff);padding:14px;border-radius:12px;border:1px solid rgba(20,40,80,0.04)}
@@ -53,6 +66,7 @@
       .hero-right{width:100%}
       .wrap{margin:18px;padding:16px}
     }
+
   </style>
 </head>
 <body>
@@ -66,7 +80,9 @@
         </div>
       </div>
       <nav aria-label="Navegació ràpida">
-        <a href="#" style="text-decoration:none;color:var(--accent);font-weight:600">Inici</a>
+        <a href="index.html" class="active">Inici</a>
+        <a href="catalog.html">Catàleg</a>
+        <a href="horaris.html">Horaris</a>
       </nav>
     </header>
 
@@ -77,7 +93,6 @@
           <h2>Descobreix el món a través dels llibres</h2>
           <p class="lead-2">La nostra biblioteca ofereix accés a llibres, revistes i recursos digitals per a totes les edats. Vine a consultar el catàleg o inscriu-te per rebre recomanacions personalitzades.</p>
 
-          <!-- El botó que porta a una altra pàgina (catalog.html) -->
           <a class="btn" href="catalog.html">Consulta el catàleg</a>
           <a class="btn secondary" href="horaris.html" style="margin-left:10px">Horaris</a>
         </div>
